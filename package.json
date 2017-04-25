@@ -1,0 +1,25 @@
+{
+  "name": "eslint-config-spreetail",
+  "version": "1.0.0",
+  "description": "ESLint configuration used at Spreetail.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spreetail/eslint-config-spreetail.git"
+  },
+  "keywords": [
+    "eslint",
+    "spreetail",
+    "javascript",
+    "styleguide"
+  ],
+  "author": "Alex Bainter <alex.bainter@spreetail.com> (https://github.com/metalex9)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Spreetail/eslint-config-spreetail/issues"
+  },
+  "homepage": "https://github.com/Spreetail/eslint-config-spreetail#readme"
+}
