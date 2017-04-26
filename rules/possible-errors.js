@@ -10,7 +10,7 @@ var rules = {
     'no-ex-assign': 'error',
     'no-extra-semi': 'warn',
     'no-func-assign': 'error',
-    'no-invalid-regex': 'error',
+    'no-invalid-regexp': 'error',
     'no-obj-calls': 'error',
     'no-prototype-builtins': 'error',
     'no-sparse-arrays': 'warn',
