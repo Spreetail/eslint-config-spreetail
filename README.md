@@ -1,28 +1,38 @@
 # eslint-config-spreetail
-This package provides an extensible [eslint](https://github.com/eslint/eslint) configuration used by [Spreetail](http://spreetail.com/).
+This package provides an extensible [ESLint](https://github.com/eslint/eslint) configuration used at [Spreetail](http://spreetail.com/).
 
 This is intended for use with ES6+ projects.
 
 ## Installation
-You will need [eslint](https://www.npmjs.com/package/eslint) installed.
+You will need [ESLint](https://www.npmjs.com/package/eslint) installed.
 
-This package can be installed from npm:
+This package can be installed from [npm](https://www.npmjs.com/package/eslint-config-spreetail):
 ```
 npm install eslint-config-spreetail --save-dev
 ```
 
 ## Usage
-Once installed, add `"extends": "spreetail"` to your `.eslintrc` file:
-```
+Once installed, add `"extends": "spreetail"` to your project's `.eslintrc` file:
+```json
 {
     "extends":  "spreetail"
 }
 ```
 
-## Explanations
+If you are using ES6 modules, be sure to add `"sourceType": "module"` to a `"parserOptions"` section of your project's `.eslintrc` file as well:
+```json
+{
+    "parserOptions": {
+        "sourceType": "module"
+    }
+}
+```
+
+## Rules
 Every rule in the configuration should be documented here with an explanation of its inclusion.
 It's important to include only rules with clear benefits and avoid rules which amount to little more than personal preference.
 The purpose of this configuration is to aid developers rather than to coerce conformity.
+Therefore, it my be a bit less strict than other configurations.
 
 Rules with an asterisk (\*) will issue warnings rather than errors.
 
@@ -62,10 +72,10 @@ This is almost certainly a mistake.
 Reassigning a function declaration (outside of the function itself) is probably a mistake and otherwise will lead to extremely confusing code.
 
 #### [no-invalid-regexp](http://eslint.org/docs/rules/no-invalid-regexp)
-These will throw errors anyway.
+This will throw an error.
 
 #### [no-obj-calls](http://eslint.org/docs/rules/no-obj-calls)
-This is not allowed as of ES5 anyway.
+This is not allowed as of ES5.
 
 #### [no-prototype-builtins](http://eslint.org/docs/rules/no-prototype-builtins)
 It's not safe to assume the default `Object.prototype` methods are accessible by every object since it's possible to create objects without the default prototype.
@@ -99,15 +109,14 @@ This is almost certainly a mistake.
 #### [array-callback-return](http://eslint.org/docs/rules/array-callback-return)\*
 This is almost certainly a mistake.
 
-#### [block-scoped-var](http://eslint.org/docs/rules/block-scoped-var)
-`var` scoping is [broken and confusing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting).
-This rules prevents accidental usage.
+#### [block-scoped-var](http://eslint.org/docs/rules/block-scoped-var)\*
+`var` scoping is [confusing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting).
 
 #### [consistent-return](http://eslint.org/docs/rules/consistent-return)\*
 This is almost certainly a mistake.
 
 #### [curly](http://eslint.org/docs/rules/curly)
-Omitting curly braces can lead to extremely confusing code. For example:
+Omitting curly braces can lead to code that does not behave as expected. For example:
 ```javascript
 if (foo)
     bar();
@@ -132,7 +141,7 @@ Be explicit and use `===` and `!==` instead.
 The default `alert`, `confirm`, and `prompt` UI elements will block the event loop (not to mention they are horrid).
 
 #### [no-caller](http://eslint.org/docs/rules/no-caller)
-This is not allowed as of ES5 anyway.
+This is not allowed as of ES5.
 
 #### [no-case-declarations](http://eslint.org/docs/rules/no-case-declarations)
 This does not behave as expected.
@@ -150,19 +159,19 @@ This is almost certainly a mistake.
 This does not behave as expected.
 
 #### [no-eval](http://eslint.org/docs/rules/no-eq-null)
-While there may be valid use cases for `eval()`, you probably aren't writing one of them.
+While there may be valid use cases for `eval()`, they are extremely rare, and `eval()` can be dangerous.
 
 #### [no-extend-native](http://eslint.org/docs/rules/no-extend-native)
 Modifying built-in prototypes can cause conflicts with other scripts and libraries.
 Use a function instead:
 ```javascript
-// Bad
+// BAD
 String.prototype.getLength = function() {
     return this.length;
 }
 const helloLength = 'hello'.getLength();
 
-// Good
+// GOOD
 function getStringLength(string) {
     return string.length;
 }
@@ -185,7 +194,7 @@ This may conflict with other scripts and libraries and should be avoided.
 See [no-eval](#no-eval).
 
 #### [no-invalid-this](http://eslint.org/docs/rules/no-invalid-this)
-This will throw an error in strict mode anyway.
+This will throw an error in strict mode.
 
 #### [no-iterator](http://eslint.org/docs/rules/no-iterator)
 This is obsolete as of ES6.
@@ -206,13 +215,13 @@ See [no-eval](#no-eval).
 This does not behave as expected.
 
 #### [no-octal](http://eslint.org/docs/rules/no-octal)
-This is deprecated as of ES5 anyway.
+This is deprecated as of ES5.
 
 #### [no-octal-escape](http://eslint.org/docs/rules/no-octal-escape)
-This is deprecated as of ES5 anyway.
+This is deprecated as of ES5.
 
 #### [no-proto](http://eslint.org/docs/rules/no-proto)
-This is deprecated as of ES3.1 anyway.
+This is deprecated as of ES3.1.
 
 #### [no-redeclare](http://eslint.org/docs/rules/no-redeclare)\*
 This is almost certainly a mistake.
@@ -319,7 +328,8 @@ function getValue()
 }
 ```
 
-Due to [automatic semicolon insertion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion), in this example a semicolon will be replaced after the `return` statement and `getValue()` will actually return `undefined`, *not* the object that was probably intended to be returned. For this reason, [the one true brace style](https://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS_.28OTBS.29) is enforced by this configuration. Turn it off if you must.
+Due to [automatic semicolon insertion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion), in this example a semicolon will be inferred after the `return` statement and `getValue()` will actually return `undefined`, *not* the object that was probably intended to be returned.
+For this reason, the "[one true brace style](https://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS_.28OTBS.29)" is enforced by this configuration.
 
 ```javascript
 // GOOD
@@ -355,17 +365,18 @@ const myOtherArray = [3]; // [3]
 
 #### [semi](http://eslint.org/docs/rules/semi)
 [Automatic semicolon insertion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) may not behave as expected.
+Use semicolons instead of relying on ASI.
 
 ### [ECMAScript 6](http://eslint.org/docs/rules/#ecmascript-6)
 
 #### [constructor-super](http://eslint.org/docs/rules/constructor-super)
-This will raise a runtime error anyway.
+This will raise a runtime error.
 
 #### [no-class-assign](http://eslint.org/docs/rules/no-class-assign)\*
 This is almost certainly a mistake.
 
 #### [no-const-assign](http://eslint.org/docs/rules/no-const-assign)
-This will raise a runtime error anyway.
+This will raise a runtime error.
 
 #### [no-dupe-class-members](http://eslint.org/docs/rules/no-dupe-class-members)\*
 This is almost certainly a mistake.
@@ -374,16 +385,16 @@ This is almost certainly a mistake.
 This is almost certainly a mistake.
 
 #### [no-new-symbol](http://eslint.org/docs/rules/no-new-symbol)
-This will throw a `TypeError` anyway.
+This will throw a `TypeError`.
 
 #### [no-this-before-super](http://eslint.org/docs/rules/no-this-before-super)
-This raises a reference error anyway.
+This raises a reference error.
 
 #### [no-useless-computed-key](http://eslint.org/docs/rules/no-useless-computed-key)\*
 This is almost certainly a mistake.
 
 #### [no-var](http://eslint.org/docs/rules/no-var)\*
-[`var` behavior](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) can be confusing and may not behave as expected.
+[`var` behavior](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) can be confusing and unexpected.
 Use `const` or `let` instead.
 See [this article](https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75) for more information.
 
@@ -396,7 +407,7 @@ Instead of using `arguments`, use [rest parameters](https://developer.mozilla.or
 This is almost certainly a mistake.
 
 #### [symbol-description](http://eslint.org/docs/rules/symbol-description)
-This will throw a `TypeError` anyway.
+This will throw a `TypeError`.
 
 ## License
 Licensed under the [MIT License](https://opensource.org/licenses/MIT).
