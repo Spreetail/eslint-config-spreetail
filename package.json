@@ -24,5 +24,8 @@
   "homepage": "https://github.com/Spreetail/eslint-config-spreetail#readme",
   "peerDependencies": {
       "eslint": "^3.19.0"
+  },
+  "engines": {
+      "node": ">= 4"
   }
 }
