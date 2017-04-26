@@ -1,7 +1,7 @@
 var rules = {
     'array-callback-return': 'warn',
     'block-scoped-var': 'error',
-    'consiste-return': 'warn',
+    'consistent-return': 'warn',
     'curly': 'error',
     'default-case': 'error',
     'eqeqeq': 'error',
