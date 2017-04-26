@@ -1,6 +1,6 @@
 var rules = {
     'array-callback-return': 'warn',
-    'block-scoped-var': 'error',
+    'block-scoped-var': 'warn',
     'consistent-return': 'warn',
     'curly': 'error',
     'default-case': 'error',
