@@ -4,9 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.0.3 - 04-26-17
+### Changed
+ - Fix typo in README.md.
+
 ## 1.0.2 - 04-26-17
 ### Changed
- - Update README.md with missed changes from 1.0.1.
+ - Update CHANGELOG.md with missed changes from 1.0.1.
 
 ## 1.0.1 - 04-26-17
 ### Changed
