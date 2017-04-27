@@ -32,7 +32,7 @@ If you are using ES6 modules, be sure to add `"sourceType": "module"` to a `"par
 Every rule in the configuration should be documented here with an explanation of its inclusion.
 It's important to include only rules with clear benefits and avoid rules which amount to little more than personal preference.
 The purpose of this configuration is to aid developers rather than to coerce conformity.
-Therefore, it my be a bit less strict than other configurations.
+Therefore, it may be a bit less strict than other configurations.
 
 Rules with an asterisk (\*) will issue warnings rather than errors.
 
