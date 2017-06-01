@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.1.0 - 06-01-17
+### Changed
+ - Turned on "smart" mode for [eqeqeq](http://eslint.org/docs/rules/eqeqeq).
+
 ## 2.0.1 - 05-04-17
 ### Changed
  - Missed changelog updates.

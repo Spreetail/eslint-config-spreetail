@@ -4,7 +4,7 @@ var rules = {
     'consistent-return': 'warn',
     'curly': 'error',
     'default-case': 'error',
-    'eqeqeq': 'error',
+    'eqeqeq': ['error', 'smart'],
     'no-alert': 'error',
     'no-caller': 'error',
     'no-case-declarations': 'error',
