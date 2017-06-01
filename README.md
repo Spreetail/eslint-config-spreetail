@@ -136,6 +136,7 @@ Any benefits of omitting curly braces is surely outweighed by the potential for 
 #### [eqeqeq](http://eslint.org/docs/rules/eqeqeq)
 The `==` and `!=` operators use type coercion which [may not behave as expected](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3).
 Be explicit and use `===` and `!==` instead.
+The [smart](http://eslint.org/docs/rules/eqeqeq#smart) option for this rule is enabled.
 
 #### [no-alert](http://eslint.org/docs/rules/no-alert)
 The default `alert`, `confirm`, and `prompt` UI elements will block the event loop (not to mention they are horrid).
