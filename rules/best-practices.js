@@ -3,7 +3,6 @@ var rules = {
     'block-scoped-var': 'warn',
     'consistent-return': 'warn',
     'curly': 'error',
-    'default-case': 'error',
     'eqeqeq': ['error', 'smart'],
     'no-alert': 'error',
     'no-caller': 'error',
