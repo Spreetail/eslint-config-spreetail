@@ -7,5 +7,5 @@ module.exports = {
     es6: true,
   },
   rules: rules,
-  plugins: 'react',
+  plugins: ['react'],
 };
