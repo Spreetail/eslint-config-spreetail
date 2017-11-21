@@ -316,39 +316,10 @@ This is almost certainly a mistake.
 
 ### [Stylistic Issues](http://eslint.org/docs/rules/#stylistic-issues)
 
-#### [brace-style](http://eslint.org/docs/rules/brace-style)
-In most cases, curly brace placement is a matter of personal preference (and such rules do not belong is this configuration).
-However, there is one situation in which curly brace placement may alter the behavior of code:
-```javascript
-// BAD
-function getValue()
-{
-    return
-    {
-        value: 'here it is!'
-    };
-}
-```
-
-Due to [automatic semicolon insertion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion), in this example a semicolon will be inferred after the `return` statement and `getValue()` will actually return `undefined`, *not* the object that was probably intended to be returned.
-For this reason, the "[one true brace style](https://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS_.28OTBS.29)" is enforced by this configuration.
-
-```javascript
-// GOOD
-function getValue() {
-    return {
-        value: 'here it is!'
-    };
-}
-```
-
-#### [comma-dangle](http://eslint.org/docs/rules/comma-dangle)
-This is for the sole purpose of generating cleaner git diffs.
-
 #### [new-cap](http://eslint.org/docs/rules/new-cap)\*
 Only constructors should begin with a capital letter to act as a visual differentiator between constructors and other functions or properties.
 
-#### [no-array-constructor](http://eslint.org/docs/rules/no-array-constructor)
+#### [no-array-constructor](http://eslint.org/docs/rules/no-array-constructor)\*
 This may not behave as expected. For example:
 ```javascript
 // BAD
@@ -366,7 +337,7 @@ const myOtherArray = [3]; // [3]
 ```
 
 #### [semi](http://eslint.org/docs/rules/semi)
-[Automatic semicolon insertion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) may not behave as expected.
+[Automatic semicolon insertion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)\* may not behave as expected.
 Use semicolons instead of relying on ASI.
 
 ### [ECMAScript 6](http://eslint.org/docs/rules/#ecmascript-6)

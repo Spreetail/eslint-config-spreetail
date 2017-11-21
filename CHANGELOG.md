@@ -27,12 +27,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - `prefer-promise-reject-errors` raises warnings
  - `radix` raises warning
  - `no-undefined` raises warning
+ - `new-cap` raises warning
+ - `no-array-constructor` raises warning
+ - `semi` raises warning
 
 
 ### Removed
  - `no-alert`
  - `no-with`
  - `no-use-before-define`
+ - `brace-style`
+ - `comma-dangle`
 
 ## 2.2.1 - 2017-10-18
 ### Removed
