@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - `new-cap` raises warning
  - `no-array-constructor` raises warning
  - `semi` raises warning
+ - `prefer-rest-params` raises warning
 
 
 ### Removed

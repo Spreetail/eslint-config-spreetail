@@ -371,10 +371,23 @@ This is almost certainly a mistake.
 Use `const` or `let` instead.
 See [this article](https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75) for more information.
 
-#### [prefer-rest-params](http://eslint.org/docs/rules/prefer-rest-params)
+#### [prefer-rest-params](http://eslint.org/docs/rules/prefer-rest-params)\*
 The `arguments` object does not behave as expected.
 It is "array-like" rather than a real array.
 Instead of using `arguments`, use [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
+
+```JavaScript
+// BAD
+function () {
+    const args = Array.prototype.sice.call(arguments);
+    // do something with the args array
+};
+
+// GOOD
+function(...args) {
+    // do something with the args array
+}
+```
 
 #### [require-yield](http://eslint.org/docs/rules/require-yield)\*
 This is almost certainly a mistake.
