@@ -5,6 +5,40 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 3.0.0 - 2017-11-21
+### Added
+ - `react/button-has-type` raises warning
+ - `react/default-props-match-prop-types` raises warning
+ - `react/no-danger` raises error
+ - `react/no-danger-with-children` raises error
+ - `react/no-deprecated` raises error
+ - `react/no-direct-mutation-state` raises warning
+ - `react/no-find-dom-node` raises error
+ - `react/no-is-mounted` raises error
+ - `react/no-redundant-should-component-update` raises warning
+ - `react/no-render-return-value` raises error
+ - `react/no-typos` raises warning
+ - `react/no-string-refs` raises error
+ - `react/no-unescaped-entities` raises warning
+ - `react/no-unknown-property` raises warning
+ - `react/no-unused-prop-types` raises warning
+ - `react/no-unused-state` raises warning
+ - `react/prefer-es6-class` raises warning
+ - `react/prefer-stateless-function` raises warning
+ - `react/prop-types` raises warning
+ - `react/react-in-jsx-scope` raises error
+ - `react/require-render-return` raises warning
+ - `react/style-prop-object` raises error
+ - `react/void-dom-elements-no-children` raises warning
+ - `react/jsx-filename-extension` raises error
+ - `react/jsx-key` raises error
+ - `react/jsx-no-bind` raises error
+ - `react/jsx-no-comment-textnode` raises warning
+ - `react/jsx-no-duplicate-props` raises warning
+ - `react/jsx-no-target-blank` raises error
+ - `react/jsx-no-undef` raises error
+ - `react/jsx-uses-react` raises error
+ - `react/jsx-uses-vars` raises error
+
 ### Changed
  - `no-compare-neg-zero` raises warning
  - `no-ex-assign` raises warning

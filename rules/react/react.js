@@ -1,0 +1,27 @@
+var rules = {
+  'react/button-has-type': 'warn',
+  'react/default-props-match-prop-types': 'warn',
+  'react/no-danger': 'error',
+  'react/no-danger-with-children': 'error',
+  'react/no-deprecated': 'error',
+  'react/no-direct-mutation-state': 'warn',
+  'react/no-find-dom-node': 'error',
+  'react/no-is-mounted': 'error',
+  'react/no-redundant-should-component-update': 'warn',
+  'react/no-render-return-value': 'error',
+  'react/no-typos': 'warn',
+  'react/no-string-refs': 'error',
+  'react/no-unescaped-entities': 'warn',
+  'react/no-unknown-property': 'warn',
+  'react/no-unused-prop-types': 'warn',
+  'react/no-unused-state': 'warn',
+  'react/prefer-es6-class': 'warn',
+  'react/prefer-stateless-function': ['warn', 'ignorePureComponents'],
+  'react/prop-types': 'warn',
+  'react/react-in-jsx-scope': 'error',
+  'react/require-render-return': 'warn',
+  'react/style-prop-object': 'error',
+  'react/void-dom-elements-no-children': 'warn',
+};
+
+module.exports = rules;

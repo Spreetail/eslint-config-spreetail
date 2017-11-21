@@ -1,5 +1,5 @@
 # eslint-config-spreetail
-This package provides an extensible [ESLint](https://github.com/eslint/eslint) configuration with a preference for helping developers avoid errors and find mistakes without being forced to adhere to opinionated, stylistic rules. It is intended for use with ES6+ projects.
+This package provides an extensible [ESLint](https://github.com/eslint/eslint) configuration with a preference for helping developers avoid errors and find mistakes without being forced to adhere to opinionated, stylistic rules. It is intended for use with ES6+ projects and also supports React and JSX.
 
 This configuration is used and maintained by [Spreetail](http://spreetail.com/).
 
@@ -394,6 +394,109 @@ This is almost certainly a mistake.
 
 #### [symbol-description](http://eslint.org/docs/rules/symbol-description)
 This will throw a `TypeError`.
+
+### [React](https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules)
+
+#### [react/button-has-type](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md)\*
+This may not behave as expected.
+
+#### [react/default-props-match-prop-types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md)\*
+This is almost certainly a mistake.
+
+#### [react/no-danger](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md)
+This is a security vulnerability.
+
+#### [react/no-danger-with-children](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md)
+Component children and `dangerouslySetInnerHTML` conflict with one another.
+
+#### [react/no-deprecated](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md)
+Deprecated methods will eventually be removed and should not be used.
+
+#### [react/no-direct-mutation-state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md)\*
+This is almost certainly a mistake.
+
+#### [react/no-find-dom-node](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md)
+This will eventually be deprecated, see [react/no-deprecated](#react/no-deprecated).
+
+#### [react/no-is-mounted](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)
+This will eventually be deprecated, see [react/no-deprecated](#react/no-deprecated).
+
+#### [react/no-redundant-should-component-update](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md)\*
+This is almost certainly a mistake.
+
+#### [react/no-render-return-value](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md)
+This is legacy functionality.
+
+#### [react/no-typos](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-typos.md)\*
+This is almost certainly a mistake.
+
+#### [react/no-string-refs](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)
+This is legacy functionality.
+
+#### [react/no-unescaped-entities](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)\*
+This is almost certainly a mistake.
+
+#### [react/no-unknown-property](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md)\*
+This is almost certainly a mistake.
+
+#### [react/no-unused-prop-types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md)\*
+This is almost certainly a mistake.
+
+#### [react/no-unused-state](-unused-https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-state.md)\*
+This is almost certainly a mistake.
+
+#### [react/prefer-es6-class](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md)\*
+This may be removed in the far distant future.
+
+#### [react/prefer-stateless-function](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md)\*
+This will lead to worse performance.
+The [ignorePureComponent](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md#ignorepurecomponents) option is enabled.
+
+#### [react/prop-types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md)\*
+This is almost certainly a mistake.
+
+#### [react/react-in-jsx-scope](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md)
+`React` is required in the scope of any JSX.
+
+####
+[react/require-render-return](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md)\*
+This is almost certainly a mistake.
+
+#### [react/style-prop-object](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md)
+This will cause an error.
+
+#### [react/void-dom-elements-no-children](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md)\*
+This is almost certainly a mistake.
+
+### [JSX](https://github.com/yannickcr/eslint-plugin-react#jsx-specific-rules)
+
+#### [react/jsx-filename-extension](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md)
+This may be required for build configurations.
+
+#### [react/jsx-key](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md)
+This is more or less required by React for performance reasons.
+
+#### [react/jsx-no-bind](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
+This will lead to poor performance.
+
+#### [react/jsx-no-comment-textnodes](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md)\*
+This is almost certainly a mistake.
+
+#### [react/jsx-no-duplicate-props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md)\*
+This is almost certainly a mistake.
+
+#### [react/jsx-no-target-blank](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md)
+This is a security vulnerability.
+
+#### [react/jsx-no-undef](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md)
+This will throw a `ReferenceError`.
+The [allowGlobals](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md#allowglobals) option is enabled.
+
+#### [react/jsx-uses-react](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md)
+This prevents other linting errors.
+
+#### [react/jsx-uses-vars](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md)
+This prevents other linting errors.
 
 ## License
 Licensed under the [MIT License](https://opensource.org/licenses/MIT).
