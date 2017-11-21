@@ -308,7 +308,7 @@ Strict mode fixes several issues in Node scripts.
 #### [no-undef](http://eslint.org/docs/rules/no-undef)\*
 This is almost certainly a mistake (or perhaps you need to specify [your project's environment](http://eslint.org/docs/user-guide/configuring#specifying-environments) or [its globals](http://eslint.org/docs/user-guide/configuring#specifying-globals) in your `.eslintrc` file).
 
-#### [no-undefined](http://eslint.org/docs/rules/no-undefined)
+#### [no-undefined](http://eslint.org/docs/rules/no-undefined)\*
 This may not behave as expected. Use `typeof myVar === 'undefined'` instead.
 
 #### [no-unused-vars](http://eslint.org/docs/rules/no-unused-vars)\*

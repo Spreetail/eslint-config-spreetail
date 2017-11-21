@@ -26,11 +26,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - `no-throw-literal` raises warning
  - `prefer-promise-reject-errors` raises warnings
  - `radix` raises warning
+ - `no-undefined` raises warning
 
 
 ### Removed
  - `no-alert`
  - `no-with`
+ - `no-use-before-define`
 
 ## 2.2.1 - 2017-10-18
 ### Removed
