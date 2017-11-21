@@ -16,7 +16,7 @@ var rules = {
   'react/no-unused-prop-types': 'warn',
   'react/no-unused-state': 'warn',
   'react/prefer-es6-class': 'warn',
-  'react/prefer-stateless-function': ['warn', 'ignorePureComponents'],
+  'react/prefer-stateless-function': ['warn', { ignorePureComponents: true }],
   'react/prop-types': 'warn',
   'react/react-in-jsx-scope': 'error',
   'react/require-render-return': 'warn',
