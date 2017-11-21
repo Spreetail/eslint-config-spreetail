@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - `react/jsx-filename-extension` raises error
  - `react/jsx-key` raises error
  - `react/jsx-no-bind` raises error
- - `react/jsx-no-comment-textnode` raises warning
+ - `react/jsx-no-comment-textnodes` raises warning
  - `react/jsx-no-duplicate-props` raises warning
  - `react/jsx-no-target-blank` raises error
  - `react/jsx-no-undef` raises error
