@@ -1,9 +1,7 @@
 var rules = {
-    'brace-style': 'error',
-    'comma-dangle': ['error', 'always-multiline'],
-    'new-cap': 'error',
-    'no-array-constructor': 'error',
-    'semi': 'error',
+  'new-cap': 'warn',
+  'no-array-constructor': 'warn',
+  semi: 'warn',
 };
 
 module.exports = rules;

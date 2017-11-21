@@ -1,5 +1,5 @@
 var rules = {
-    'strict': 'error',
+  strict: 'error',
 };
 
 module.exports = rules;
