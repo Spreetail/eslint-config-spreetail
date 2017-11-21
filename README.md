@@ -44,7 +44,7 @@ Rules which raise an **error** inform the developer, "This is going to break now
 Developers should be cautious when disabling these rules.
 
 Rules which raise a **warning** inform the developer, "This is probably indicative of a mistake or might not behave as one would expect."
-Developers can be more comfortable disabling these rules.
+Developers can be more comfortable disabling these rules but are encouraged to understand why the rules exist and evaluate alternatives.
 
 Rules marked here with an asterisk (\*) will issue warnings rather than errors.
 
@@ -110,7 +110,7 @@ This does not behave as expected.
 #### [no-unsafe-negation](http://eslint.org/docs/rules/no-unsafe-negation)\*
 This is almost certainly a mistake.
 
-#### [use-isnan](http://eslint.org/docs/rules/use-isnan)
+#### [use-isnan](http://eslint.org/docs/rules/use-isnan)\*
 Comparisons directly to `NaN` do not behave as expected.
 
 #### [valid-typeof](http://eslint.org/docs/rules/valid-typeof)\*
@@ -127,7 +127,7 @@ This is almost certainly a mistake.
 #### [consistent-return](http://eslint.org/docs/rules/consistent-return)\*
 This is almost certainly a mistake.
 
-#### [curly](http://eslint.org/docs/rules/curly)
+#### [curly](http://eslint.org/docs/rules/curly)\*
 Omitting curly braces can lead to code that does not behave as expected. For example:
 ```javascript
 if (foo)
@@ -143,20 +143,20 @@ if (foo) {
 baz();
 ```
 
-Any benefits of omitting curly braces is surely outweighed by the potential for confusion.
+The [multi-line](https://eslint.org/docs/rules/curly#multi-line) option for this rule is enabled, meaning brackets may be omitted for single-line statements:
+```JavaScript
+if (foo) bar();
+```
 
-#### [eqeqeq](http://eslint.org/docs/rules/eqeqeq)
+#### [eqeqeq](http://eslint.org/docs/rules/eqeqeq)\*
 The `==` and `!=` operators use type coercion which [may not behave as expected](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3).
 Be explicit and use `===` and `!==` instead.
 The [smart](http://eslint.org/docs/rules/eqeqeq#smart) option for this rule is enabled.
 
-#### [no-alert](http://eslint.org/docs/rules/no-alert)
-The default `alert`, `confirm`, and `prompt` UI elements will block the event loop (not to mention they are horrid).
-
 #### [no-caller](http://eslint.org/docs/rules/no-caller)
 This is not allowed as of ES5.
 
-#### [no-case-declarations](http://eslint.org/docs/rules/no-case-declarations)
+#### [no-case-declarations](http://eslint.org/docs/rules/no-case-declarations)\*
 This does not behave as expected.
 
 #### [no-div-regex](http://eslint.org/docs/rules/no-div-regex)\*
@@ -168,13 +168,13 @@ This is almost certainly a mistake.
 #### [no-empty-pattern](http://eslint.org/docs/rules/no-empty-pattern)\*
 This is almost certainly a mistake.
 
-#### [no-eq-null](http://eslint.org/docs/rules/no-eq-null)
+#### [no-eq-null](http://eslint.org/docs/rules/no-eq-null)\*
 This does not behave as expected.
 
 #### [no-eval](http://eslint.org/docs/rules/no-eq-null)
 While there may be valid use cases for `eval()`, they are extremely rare, and `eval()` can be dangerous.
 
-#### [no-extend-native](http://eslint.org/docs/rules/no-extend-native)
+#### [no-extend-native](http://eslint.org/docs/rules/no-extend-native)\*
 Modifying built-in prototypes can cause conflicts with other scripts and libraries.
 Use a function instead:
 ```javascript
@@ -201,7 +201,17 @@ This is far more likely to be a mistake than intentional.
 This is almost certainly a mistake.
 
 #### [no-implicit-globals](http://eslint.org/docs/rules/no-implicit-globals)\*
-This may conflict with other scripts and libraries and should be avoided.
+This might be a mistake.
+Be explicit to avoid confusion:
+```javascript
+// BAD
+const globalVar = 'hello';
+
+// GOOD
+window.globalVar = 'hello'; // in the browser
+// or
+global.globarVar = 'hello'; // in Node
+```
 
 #### [no-implied-eval](http://eslint.org/docs/rules/no-implied-eval)
 See [no-eval](#no-eval).
@@ -209,22 +219,22 @@ See [no-eval](#no-eval).
 #### [no-invalid-this](http://eslint.org/docs/rules/no-invalid-this)
 This will throw an error in strict mode.
 
-#### [no-iterator](http://eslint.org/docs/rules/no-iterator)
+#### [no-iterator](http://eslint.org/docs/rules/no-iterator)\*
 This is obsolete as of ES6.
 
-#### [no-lone-blocks](http://eslint.org/docs/rules/no-lone-blocks)
+#### [no-lone-blocks](http://eslint.org/docs/rules/no-lone-blocks)\*
 This is almost certainly a mistake.
 
-#### [no-loop-func](http://eslint.org/docs/rules/no-loop-func)
+#### [no-loop-func](http://eslint.org/docs/rules/no-loop-func)\*
 This does not behave as expected.
 
-#### [no-new](http://eslint.org/docs/rules/no-new)
-`new` should only be used with constructors.
+#### [no-new](http://eslint.org/docs/rules/no-new)\*
+This is almost certainly a mistake.
 
 #### [no-new-func](http://eslint.org/docs/rules/no-new-func)
 See [no-eval](#no-eval).
 
-#### [no-new-wrappers](http://eslint.org/docs/rules/no-new-wrappers)
+#### [no-new-wrappers](http://eslint.org/docs/rules/no-new-wrappers)\*
 This does not behave as expected.
 
 #### [no-octal](http://eslint.org/docs/rules/no-octal)
@@ -254,8 +264,9 @@ This is almost certainly a mistake.
 #### [no-sequences](http://eslint.org/docs/rules/no-sequences)\*
 This is more likely to be a mistake than intentional.
 
-#### [no-throw-literal](http://eslint.org/docs/rules/no-throw-literal)
+#### [no-throw-literal](http://eslint.org/docs/rules/no-throw-literal)\*
 Only `Error` objects should be thrown, as they provide information about where they originated.
+Code set up to handle thrown objects typically expect that only `Error` objects will be thrown.
 
 #### [no-unmodified-loop-condition](http://eslint.org/docs/rules/no-unmodified-loop-condition)\*
 This is almost certainly a mistake.
@@ -266,29 +277,11 @@ This is almost certainly a mistake.
 #### [no-useless-escape](http://eslint.org/docs/rules/no-useless-escape)\*
 This is almost certainly a mistake.
 
-#### [no-with](http://eslint.org/docs/rules/no-with)
-This is too ambiguous. Use a new variable instead:
-```javascript
-my.really.long.variable.has.some.properties.named = {
-    thing1: 'and',
-    thing2: '!'
-};
+#### [prefer-promise-reject-errors](http://eslint.org/docs/rules/prefer-promise-reject-errors)\*
+There is an expectation that Promises will only reject with an `Error` object.
+This ensures Promise rejections can be handled consistently.
 
-// BAD
-with (my.really.long.variable.has.some.properties.named) {
-    console.log(thing1, thing2);
-}
-
-// GOOD
-const named = my.really.long.variable.has.some.properties.named;
-console.log(named.thing1, named.thing2);
-```
-
-#### [prefer-promise-reject-errors](http://eslint.org/docs/rules/prefer-promise-reject-errors)
-Promises should always reject with an `Error` object so the consumers know exactly what to expect.
-Additionally, `Error` objects provide information about where they originated.
-
-#### [radix](http://eslint.org/docs/rules/radix)
+#### [radix](http://eslint.org/docs/rules/radix)\*
 Calling `parseInt()` with a string that starts with '0' will force evaluation as an octal, which is almost certainly a mistake. Always pass the intended radix parameter (probably `10`):
 ```javascript
 // BAD

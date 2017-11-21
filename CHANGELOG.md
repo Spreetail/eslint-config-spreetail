@@ -12,9 +12,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - `no-prototype-builtins` raises warning
  - `no-unexpected-multiline` raises warning
  - `no-unsafe-finally` raises warning
+ - `use-isnan` raises warning
+ - `curly` raises warning and allows exceptions for single statements
+ - `eqeqeq` raises warning
+ - `no-case-declarations` raises warning
+ - `no-eq-null` raises warning
+ - `no-extend-native` raises warning
+ - `no-iterator` raises warning
+ - `no-lone-blocks` raises warning
+ - `no-loop-func` raises warning
+ - `no-new` raises warning
+ - `no-new-wrappers` raises warning
+ - `no-throw-literal` raises warning
+ - `prefer-promise-reject-errors` raises warnings
+ - `radix` raises warning
+
 
 ### Removed
- -
+ - `no-alert`
+ - `no-with`
 
 ## 2.2.1 - 2017-10-18
 ### Removed
