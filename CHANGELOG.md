@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.0.0 - 2017-11-21
+### Changed
+ - `no-compare-neg-zero` raises warning
+ - `no-ex-assign` raises warning
+ - `no-func-assign` raises warning
+ - `no-prototype-builtins` raises warning
+ - `no-unexpected-multiline` raises warning
+ - `no-unsafe-finally` raises warning
+
+### Removed
+ -
+
 ## 2.2.1 - 2017-10-18
 ### Removed
  - [default-case](https://eslint.org/docs/rules/default-case).

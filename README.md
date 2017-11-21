@@ -1,13 +1,16 @@
 # eslint-config-spreetail
-This package provides an extensible [ESLint](https://github.com/eslint/eslint) configuration used at [Spreetail](http://spreetail.com/).
+This package provides an extensible [ESLint](https://github.com/eslint/eslint) configuration with a preference for helping developers avoid errors and find mistakes without being forced to adhere to opinionated, stylistic rules. It is intended for use with ES6+ projects.
 
-This is intended for use with ES6+ projects.
+This configuration is used and maintained by [Spreetail](http://spreetail.com/).
 
 ## Installation
-You will need [ESLint](https://www.npmjs.com/package/eslint) installed.
+You will need [ESLint](https://www.npmjs.com/package/eslint) as a dependency.
+```bash
+npm install eslint --save-dev
+```
 
 This package can be installed from [npm](https://www.npmjs.com/package/eslint-config-spreetail):
-```
+```bash
 npm install eslint-config-spreetail --save-dev
 ```
 
@@ -19,7 +22,7 @@ Once installed, add `"extends": "spreetail"` to your project's `.eslintrc` file:
 }
 ```
 
-If you are using ES6 modules, be sure to add `"sourceType": "module"` to a `"parserOptions"` section of your project's `.eslintrc` file as well:
+If you are using a module bundler such as [webpack](https://webpack.js.org/) or [rollup.js](https://rollupjs.org/), be sure to add `"sourceType": "module"` to a `"parserOptions"` section of your project's `.eslintrc` file as well:
 ```json
 {
     "parserOptions": {
@@ -29,23 +32,32 @@ If you are using ES6 modules, be sure to add `"sourceType": "module"` to a `"par
 ```
 
 ## Rules
-Every rule in the configuration should be documented here with an explanation of its inclusion.
-It's important to include only rules with clear benefits and avoid rules which amount to little more than personal preference.
+Every rule in the configuration is documented here with an explanation of its inclusion.
+
+### Philosophy
 The purpose of this configuration is to aid developers rather than to coerce conformity.
 Therefore, it may be a bit less strict than other configurations.
+Great care has been taken to ensure all the rules provide a worthwhile benefit to any developer.
 
-Rules with an asterisk (\*) will issue warnings rather than errors.
+#### Warnings vs Errors
+Rules which raise an **error** inform the developer, "This is going to break now or sometime in the future, is a security vulnerability, or will lead to poor performance."
+Developers should be cautious when disabling these rules.
+
+Rules which raise a **warning** inform the developer, "This is probably indicative of a mistake or might not behave as one would expect."
+Developers can be more comfortable disabling these rules.
+
+Rules marked here with an asterisk (\*) will issue warnings rather than errors.
 
 ### [Possible Errors](http://eslint.org/docs/rules/#possible-errors)
 
 #### [no-await-in-loop](http://eslint.org/docs/rules/no-await-in-loop)
 This will lead to poor performance. Use `Promise.all()` instead.
 
+#### [no-compare-neg-zero](http://eslint.org/docs/rules/no-compare-neg-zero)\*
+Comparing to `-0` will pass for 0 and -0 which is confusing.
+
 #### [no-constant-condition](http://eslint.org/docs/rules/no-constant-condition)\*
 This is almost certainly a mistake.
-
-#### [no-compare-neg-zero](http://eslint.org/docs/rules/no-compare-neg-zero)
-Comparing to `-0` will pass for 0 and -0 which is confusing.
 
 #### [no-dupe-args](http://eslint.org/docs/rules/no-dupe-args)\*
 This is almost certainly a mistake.
@@ -62,13 +74,13 @@ Empty block statements are almost certainly unintentional and may be a sign of i
 #### [no-empty-character-class](http://eslint.org/docs/rules/no-empty-character-class)\*
 Empty character classes won't match anything and are probably just a sign of unfinished regex.
 
-#### [no-ex-assign](http://eslint.org/docs/rules/no-ex-assign)
+#### [no-ex-assign](http://eslint.org/docs/rules/no-ex-assign)\*
 Reassigning to an exception in a `catch` block is destructive.
 
 #### [no-extra-semi](http://eslint.org/docs/rules/no-extra-semi)\*
 This is almost certainly a mistake.
 
-#### [no-func-assign](http://eslint.org/docs/rules/no-func-assign)
+#### [no-func-assign](http://eslint.org/docs/rules/no-func-assign)\*
 Reassigning a function declaration (outside of the function itself) is probably a mistake and otherwise will lead to extremely confusing code.
 
 #### [no-invalid-regexp](http://eslint.org/docs/rules/no-invalid-regexp)
@@ -77,7 +89,7 @@ This will throw an error.
 #### [no-obj-calls](http://eslint.org/docs/rules/no-obj-calls)
 This is not allowed as of ES5.
 
-#### [no-prototype-builtins](http://eslint.org/docs/rules/no-prototype-builtins)
+#### [no-prototype-builtins](http://eslint.org/docs/rules/no-prototype-builtins)\*
 It's not safe to assume the default `Object.prototype` methods are accessible by every object since it's possible to create objects without the default prototype.
 
 #### [no-sparse-arrays](http://eslint.org/docs/rules/no-sparse-arrays)\*
@@ -86,13 +98,13 @@ This is almost certainly a mistake.
 #### [no-template-curly-in-string](http://eslint.org/docs/rules/no-template-curly-in-string)\*
 This is almost certainly a mistake. Backticks (\`) were probably intended.
 
-#### [no-unexpected-multiline](http://eslint.org/docs/rules/no-unexpected-multiline)
+#### [no-unexpected-multiline](http://eslint.org/docs/rules/no-unexpected-multiline)\*
 This may not behave as expected due to [automatic semicolon insertion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion).
 
 #### [no-unreachable](http://eslint.org/docs/rules/no-unreachable)\*
 This is almost certainly a mistake.
 
-#### [no-unsafe-finally](http://eslint.org/docs/rules/no-unsafe-finally)
+#### [no-unsafe-finally](http://eslint.org/docs/rules/no-unsafe-finally)\*
 This does not behave as expected.
 
 #### [no-unsafe-negation](http://eslint.org/docs/rules/no-unsafe-negation)\*
@@ -308,10 +320,6 @@ This may not behave as expected. Use `typeof myVar === 'undefined'` instead.
 
 #### [no-unused-vars](http://eslint.org/docs/rules/no-unused-vars)\*
 This is almost certainly a mistake.
-
-#### [no-use-before-define](http://eslint.org/docs/rules/no-use-before-define)\*
-[`var` hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) can lead to confusing code.
-If variables are used before they are declared, it may be indicative of a mistake.
 
 ### [Stylistic Issues](http://eslint.org/docs/rules/#stylistic-issues)
 
