@@ -301,7 +301,7 @@ This should be wrapped in parentheses instead.
 ### [Strict Mode](http://eslint.org/docs/rules/#strict-mode)
 
 #### [strict](http://eslint.org/docs/rules/strict)
-This should be in strict mode.
+Strict mode fixes several issues in Node scripts.
 
 ### [Variables](http://eslint.org/docs/rules/#variables)
 
