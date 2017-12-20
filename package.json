@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/Spreetail/eslint-config-spreetail.git"
   },
+  "files": [
+    "rules"
+  ],
   "keywords": [
     "eslint",
     "spreetail",
