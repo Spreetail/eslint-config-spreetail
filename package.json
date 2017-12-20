@@ -1,16 +1,19 @@
 {
   "name": "eslint-config-spreetail",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "ESLint configuration used at Spreetail.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "git push && git push --tags"
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Spreetail/eslint-config-spreetail.git"
   },
+  "files": [
+    "rules"
+  ],
   "keywords": [
     "eslint",
     "spreetail",
