@@ -21,6 +21,8 @@ var rules = {
   'no-unsafe-negation': 'warn',
   'use-isnan': 'warn',
   'valid-typeof': 'warn',
+  'no-console': 'warn',
+  'no-cond-assign': 'error',
 };
 
 module.exports = rules;
