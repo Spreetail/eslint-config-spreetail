@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-spreetail",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "ESLint configuration used at Spreetail.",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "javascript",
     "styleguide"
   ],
-  "author": "Alex Bainter <alex.bainter@spreetail.com> (https://github.com/metalex9)",
+  "author": "Dalton Wignall <dalton.wignall@spreetail.com> (https://github.com/daltonwignall)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Spreetail/eslint-config-spreetail/issues"
