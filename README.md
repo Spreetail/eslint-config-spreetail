@@ -56,7 +56,7 @@ This will lead to poor performance. Use `Promise.all()` instead.
 #### [no-compare-neg-zero](http://eslint.org/docs/rules/no-compare-neg-zero)\*
 Comparing to `-0` will pass for 0 and -0 which is confusing.
 
-### [no-cond-assign](https://eslint.org/docs/rules/no-cond-assign)
+#### [no-cond-assign](https://eslint.org/docs/rules/no-cond-assign)
 This is almost certainly a mistake.
 
 #### [no-console](https://eslint.org/docs/rules/no-console)\*
