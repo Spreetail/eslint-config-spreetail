@@ -7,7 +7,7 @@ var rules = {
   'quote-props': ['warn', 'as-needed'],
   'space-before-function-paren': 'warn',
   'space-before-blocks': 'warn',
-  'no-multi-assign': 'warn',
+  'no-multi-assign': 'error',
   'no-nested-ternary': 'warn',
   'id-length': ['warn', { 'exceptions': ['e', 'i'] }],
   'comma-spacing': 'warn',
