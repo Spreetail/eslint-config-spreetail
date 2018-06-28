@@ -48,7 +48,9 @@ Developers can be more comfortable disabling these rules but are encouraged to u
 
 Rules marked here with an asterisk (\*) will issue warnings rather than errors.
 
+
 ### [Possible Errors](http://eslint.org/docs/rules/#possible-errors)
+<hr />
 
 #### [no-await-in-loop](http://eslint.org/docs/rules/no-await-in-loop)
 This will lead to poor performance. Use `Promise.all()` instead.
@@ -121,6 +123,7 @@ Comparisons directly to `NaN` do not behave as expected.
 
 #### [valid-typeof](http://eslint.org/docs/rules/valid-typeof)\*
 This is almost certainly a mistake.
+
 
 ### [Best Practices](http://eslint.org/docs/rules/#best-practices)
 <hr />
@@ -308,11 +311,13 @@ This is almost certainly a mistake.
 Attempting to immediately execute a function declaration will cause a `SyntaxError`.
 This should be wrapped in parentheses instead.
 
+
 ### [Strict Mode](http://eslint.org/docs/rules/#strict-mode)
 <hr />
 
 #### [strict](http://eslint.org/docs/rules/strict)
 Strict mode fixes several issues in Node scripts.
+
 
 ### [Variables](http://eslint.org/docs/rules/#variables)
 <hr />
@@ -328,6 +333,7 @@ This is almost certainly a mistake.
 
 #### [no-use-before-define](https://eslint.org/docs/rules/no-use-before-define)
 This is almost certainly a mistake.
+
 
 ### [Stylistic Issues](http://eslint.org/docs/rules/#stylistic-issues)
 <hr />
@@ -406,6 +412,7 @@ Leads to inconsistency in readability.
 #### [space-in-parens](https://eslint.org/docs/rules/space-in-parens)\*
 Leads to inconsistency in readability.
 
+
 ### [ECMAScript 6](http://eslint.org/docs/rules/#ecmascript-6)
 <hr />
 
@@ -473,6 +480,7 @@ This is almost certainly a mistake.
 
 #### [symbol-description](http://eslint.org/docs/rules/symbol-description)
 This will throw a `TypeError`.
+
 
 ### [React](https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules)
 <hr />
@@ -550,6 +558,7 @@ This will cause an error.
 
 #### [react/void-dom-elements-no-children](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md)\*
 This is almost certainly a mistake.
+
 
 ### [JSX](https://github.com/yannickcr/eslint-plugin-react#jsx-specific-rules)
 <hr />
