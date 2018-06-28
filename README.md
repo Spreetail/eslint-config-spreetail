@@ -123,6 +123,7 @@ Comparisons directly to `NaN` do not behave as expected.
 This is almost certainly a mistake.
 
 ### [Best Practices](http://eslint.org/docs/rules/#best-practices)
+<hr />
 
 #### [array-callback-return](http://eslint.org/docs/rules/array-callback-return)\*
 This is almost certainly a mistake.
@@ -308,11 +309,13 @@ Attempting to immediately execute a function declaration will cause a `SyntaxErr
 This should be wrapped in parentheses instead.
 
 ### [Strict Mode](http://eslint.org/docs/rules/#strict-mode)
+<hr />
 
 #### [strict](http://eslint.org/docs/rules/strict)
 Strict mode fixes several issues in Node scripts.
 
 ### [Variables](http://eslint.org/docs/rules/#variables)
+<hr />
 
 #### [no-undef](http://eslint.org/docs/rules/no-undef)\*
 This is almost certainly a mistake (or perhaps you need to specify [your project's environment](http://eslint.org/docs/user-guide/configuring#specifying-environments) or [its globals](http://eslint.org/docs/user-guide/configuring#specifying-globals) in your `.eslintrc` file).
@@ -327,6 +330,7 @@ This is almost certainly a mistake.
 This is almost certainly a mistake.
 
 ### [Stylistic Issues](http://eslint.org/docs/rules/#stylistic-issues)
+<hr />
 
 #### [array-bracket-spacing](https://eslint.org/docs/rules/array-bracket-spacing)\*
 Leads to inconsistency in readability.
@@ -403,6 +407,7 @@ Leads to inconsistency in readability.
 Leads to inconsistency in readability.
 
 ### [ECMAScript 6](http://eslint.org/docs/rules/#ecmascript-6)
+<hr />
 
 #### [arrow-spacing](https://eslint.org/docs/rules/arrow-spacing)\*
 Leads to inconsistency in readability
@@ -470,6 +475,7 @@ This is almost certainly a mistake.
 This will throw a `TypeError`.
 
 ### [React](https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules)
+<hr />
 
 #### [react/button-has-type](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md)\*
 This may not behave as expected.
@@ -546,6 +552,7 @@ This will cause an error.
 This is almost certainly a mistake.
 
 ### [JSX](https://github.com/yannickcr/eslint-plugin-react#jsx-specific-rules)
+<hr />
 
 #### [react/jsx-filename-extension](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md)
 This may be required for build configurations.
