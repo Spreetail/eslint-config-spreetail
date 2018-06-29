@@ -22,6 +22,7 @@ var rules = {
   'react/require-render-return': 'warn',
   'react/style-prop-object': 'error',
   'react/void-dom-elements-no-children': 'warn',
+  'react/no-this-in-sfc': 'warn',
 };
 
 module.exports = rules;

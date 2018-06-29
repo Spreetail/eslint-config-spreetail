@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 4.0.0 - 2018-06-27
+### Added
+ - `no-console` raises warning
+ - `no-cond-assign` raises error
+ - `object-shorthand` raises warning
+ - `prefer-const` raises warning
+ - `arrow-spacing` raises warning
+ - `prefer-template` raises warning
+ - `no-useless-concat` raises warning
+ - `quotes` raises warning
+ - `jsx-quotes` raises warning
+ - `quote-props` raises warning
+ - `space-before-function-paren` raises warning
+ - `space-before-blocks` raises warning
+ - `no-multi-assign` raises warning
+ - `no-nested-ternary` raises warning
+ - `id-length` raises warning
+ - `comma-spacing` raises warning
+ - `func-call-spacing` raises warning
+ - `key-spacing` raises warning
+ - `array-bracket-spacing` raises warning
+ - `space-in-parens` raises warning
+ - `brace-style` raises warning
+ - `no-use-before-define` raises error
+ - `react/no-this-in-sfc` raises warning
+ - `react/jsx-pascal-case` raises warning
+
 ## 3.0.1 - 2017-12-20
 ### Added
  - `jsx` ecmaFeature enabled

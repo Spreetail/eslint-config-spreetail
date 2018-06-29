@@ -11,6 +11,10 @@ var rules = {
   'prefer-rest-params': 'warn',
   'require-yield': 'warn',
   'symbol-description': 'error',
+  'object-shorthand': 'warn',
+  'prefer-const': 'warn',
+  'arrow-spacing': 'warn',
+  'prefer-template': 'warn',
 };
 
 module.exports = rules;

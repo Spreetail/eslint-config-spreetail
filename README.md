@@ -46,15 +46,22 @@ Developers should be cautious when disabling these rules.
 Rules which raise a **warning** inform the developer, "This is probably indicative of a mistake or might not behave as one would expect."
 Developers can be more comfortable disabling these rules but are encouraged to understand why the rules exist and evaluate alternatives.
 
-Rules marked here with an asterisk (\*) will issue warnings rather than errors.
+Rules marked here with an asterisk (\*) will issue warnings rather than errors.<br /><br />
 
 ### [Possible Errors](http://eslint.org/docs/rules/#possible-errors)
+<hr />
 
 #### [no-await-in-loop](http://eslint.org/docs/rules/no-await-in-loop)
 This will lead to poor performance. Use `Promise.all()` instead.
 
 #### [no-compare-neg-zero](http://eslint.org/docs/rules/no-compare-neg-zero)\*
 Comparing to `-0` will pass for 0 and -0 which is confusing.
+
+#### [no-cond-assign](https://eslint.org/docs/rules/no-cond-assign)
+This is almost certainly a mistake.
+
+#### [no-console](https://eslint.org/docs/rules/no-console)\*
+It clutters up the console and makes it more difficult to debug actual errors/warnings.
 
 #### [no-constant-condition](http://eslint.org/docs/rules/no-constant-condition)\*
 This is almost certainly a mistake.
@@ -114,9 +121,10 @@ This is almost certainly a mistake.
 Comparisons directly to `NaN` do not behave as expected.
 
 #### [valid-typeof](http://eslint.org/docs/rules/valid-typeof)\*
-This is almost certainly a mistake.
+This is almost certainly a mistake.<br /><br />
 
 ### [Best Practices](http://eslint.org/docs/rules/#best-practices)
+<hr />
 
 #### [array-callback-return](http://eslint.org/docs/rules/array-callback-return)\*
 This is almost certainly a mistake.
@@ -274,6 +282,9 @@ This is almost certainly a mistake.
 #### [no-unused-expressions](http://eslint.org/docs/rules/no-unused-expressions)\*
 This is almost certainly a mistake.
 
+#### [no-useless-concat](https://eslint.org/docs/rules/no-useless-concat)\*
+This is almost certainly a mistake.
+
 #### [no-useless-escape](http://eslint.org/docs/rules/no-useless-escape)\*
 This is almost certainly a mistake.
 
@@ -296,14 +307,16 @@ This is almost certainly a mistake.
 
 #### [wrap-iife](http://eslint.org/docs/rules/wrap-iife)
 Attempting to immediately execute a function declaration will cause a `SyntaxError`.
-This should be wrapped in parentheses instead.
+This should be wrapped in parentheses instead.<br /><br />
 
 ### [Strict Mode](http://eslint.org/docs/rules/#strict-mode)
+<hr />
 
 #### [strict](http://eslint.org/docs/rules/strict)
-Strict mode fixes several issues in Node scripts.
+Strict mode fixes several issues in Node scripts.<br /><br />
 
 ### [Variables](http://eslint.org/docs/rules/#variables)
+<hr />
 
 #### [no-undef](http://eslint.org/docs/rules/no-undef)\*
 This is almost certainly a mistake (or perhaps you need to specify [your project's environment](http://eslint.org/docs/user-guide/configuring#specifying-environments) or [its globals](http://eslint.org/docs/user-guide/configuring#specifying-globals) in your `.eslintrc` file).
@@ -314,7 +327,40 @@ This may not behave as expected. Use `typeof myVar === 'undefined'` instead.
 #### [no-unused-vars](http://eslint.org/docs/rules/no-unused-vars)\*
 This is almost certainly a mistake.
 
+#### [no-use-before-define](https://eslint.org/docs/rules/no-use-before-define)
+This is almost certainly a mistake.<br /><br />
+
 ### [Stylistic Issues](http://eslint.org/docs/rules/#stylistic-issues)
+<hr />
+
+#### [array-bracket-spacing](https://eslint.org/docs/rules/array-bracket-spacing)\*
+Leads to inconsistency in readability.
+
+#### [brace-style](https://eslint.org/docs/rules/brace-style)\*
+Leads to inconsistency in readability. We standardize the following brace style ("1tbs"):
+
+```javascript
+  if (testIsTrue) {
+    // Do this
+  } else {
+    // Do this
+  }
+```
+
+#### [comma-spacing](https://eslint.org/docs/rules/comma-spacing)\*
+Leads to inconsistency in readability.
+
+#### [func-call-spacing](https://eslint.org/docs/rules/func-call-spacing)\*
+Leads to inconsistency in readability.
+
+#### [id-length](https://eslint.org/docs/rules/id-length)\*
+Single letter variables make code difficult to read. Adds exceptions for 'i' (index) and 'e' (event).
+
+#### [key-spacing](https://eslint.org/docs/rules/key-spacing)\*
+Leads to inconsistency in readability.
+
+#### [jsx-quotes](https://eslint.org/docs/rules/jsx-quotes)\*
+Leads to inconsistency in readability. Using "" as standard.
 
 #### [new-cap](http://eslint.org/docs/rules/new-cap)\*
 Only constructors should begin with a capital letter to act as a visual differentiator between constructors and other functions or properties.
@@ -336,11 +382,36 @@ const myArray = [1, 2]; // [1, 2]
 const myOtherArray = [3]; // [3]
 ```
 
+#### [no-multi-assign](https://eslint.org/docs/rules/no-multi-assign)
+This can lead to the accidental decleration of global variables.
+
+#### [no-nested-ternary](https://eslint.org/docs/rules/no-nested-ternary)
+This is difficult to read.
+
+#### [quotes](https://eslint.org/docs/rules/quotes)\*
+Leads to inconsistency in readability. Using "" due to [this](https://stackoverflow.com/questions/242813/when-to-use-double-or-single-quotes-in-javascript/18041188#18041188).
+
+#### [quote-props](https://eslint.org/docs/rules/quote-props)\*
+Leads to inconsistency in readability. Using "as-needed" option.
+
 #### [semi](http://eslint.org/docs/rules/semi)
 [Automatic semicolon insertion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)\* may not behave as expected.
 Use semicolons instead of relying on ASI.
 
+#### [space-before-blocks](https://eslint.org/docs/rules/space-before-blocks)\*
+Leads to inconsistency in readability.
+
+#### [space-before-function-paren](https://eslint.org/docs/rules/space-before-function-paren)\*
+Leads to inconsistency in readability.
+
+#### [space-in-parens](https://eslint.org/docs/rules/space-in-parens)\*
+Leads to inconsistency in readability.<br /><br />
+
 ### [ECMAScript 6](http://eslint.org/docs/rules/#ecmascript-6)
+<hr />
+
+#### [arrow-spacing](https://eslint.org/docs/rules/arrow-spacing)\*
+Leads to inconsistency in readability
 
 #### [constructor-super](http://eslint.org/docs/rules/constructor-super)
 This will raise a runtime error.
@@ -371,10 +442,19 @@ This is almost certainly a mistake.
 Use `const` or `let` instead.
 See [this article](https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75) for more information.
 
+#### [object-shorthand](https://eslint.org/docs/rules/object-shorthand)\*
+This is a solid time saver and avoids repetition.
+
+#### [prefer-const](https://eslint.org/docs/rules/prefer-const)\*
+Best practice to use const if a variable is not re-assigned.
+
 #### [prefer-rest-params](http://eslint.org/docs/rules/prefer-rest-params)\*
 The `arguments` object does not behave as expected.
 It is "array-like" rather than a real array.
 Instead of using `arguments`, use [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
+
+#### [prefer-template](https://eslint.org/docs/rules/prefer-template)\*
+Leads to inconsistency in readability.
 
 ```JavaScript
 // BAD
@@ -393,9 +473,10 @@ function(...args) {
 This is almost certainly a mistake.
 
 #### [symbol-description](http://eslint.org/docs/rules/symbol-description)
-This will throw a `TypeError`.
+This will throw a `TypeError`.<br /><br />
 
 ### [React](https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules)
+<hr />
 
 #### [react/button-has-type](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md)\*
 This may not behave as expected.
@@ -428,6 +509,9 @@ This is almost certainly a mistake.
 This is legacy functionality.
 
 #### [react/no-typos](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-typos.md)\*
+This is almost certainly a mistake.
+
+#### [react/no-this-in-sfc](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-this-in-sfc.md)\*
 This is almost certainly a mistake.
 
 #### [react/no-string-refs](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)
@@ -466,9 +550,10 @@ This is almost certainly a mistake.
 This will cause an error.
 
 #### [react/void-dom-elements-no-children](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md)\*
-This is almost certainly a mistake.
+This is almost certainly a mistake.<br /><br />
 
 ### [JSX](https://github.com/yannickcr/eslint-plugin-react#jsx-specific-rules)
+<hr />
 
 #### [react/jsx-filename-extension](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md)
 This may be required for build configurations.
@@ -491,6 +576,9 @@ This is a security vulnerability.
 #### [react/jsx-no-undef](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md)
 This will throw a `ReferenceError`.
 The [allowGlobals](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md#allowglobals) option is enabled.
+
+#### [react/jsx-pascal-case](https://github.com/yannickcr/eslint-plugin-react/blob/HEAD/docs/rules/jsx-pascal-case.md)\*
+This is largely a universal standard.
 
 #### [react/jsx-uses-react](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md)
 This prevents other linting errors.

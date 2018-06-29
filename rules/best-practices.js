@@ -40,6 +40,7 @@ var rules = {
   radix: 'warn',
   'require-await': 'error',
   'wrap-iife': 'error',
+  'no-useless-concat': 'warn',
 };
 
 module.exports = rules;

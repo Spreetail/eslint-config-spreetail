@@ -8,6 +8,7 @@ var rules = {
   'react/jsx-no-undef': 'error',
   'react/jsx-uses-react': 'error',
   'react/jsx-uses-vars': 'error',
+  'react/jsx-pascal-case': 'warn',
 };
 
 module.exports = rules;
