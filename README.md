@@ -46,7 +46,7 @@ Developers should be cautious when disabling these rules.
 Rules which raise a **warning** inform the developer, "This is probably indicative of a mistake or might not behave as one would expect."
 Developers can be more comfortable disabling these rules but are encouraged to understand why the rules exist and evaluate alternatives.
 
-Rules marked here with an asterisk (\*) will issue warnings rather than errors.
+Rules marked here with an asterisk (\*) will issue warnings rather than errors.<br /><br />
 
 ### [Possible Errors](http://eslint.org/docs/rules/#possible-errors)
 <hr />
