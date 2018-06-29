@@ -401,9 +401,6 @@ Use semicolons instead of relying on ASI.
 #### [space-before-blocks](https://eslint.org/docs/rules/space-before-blocks)\*
 Leads to inconsistency in readability.
 
-#### [space-before-function-paren](https://eslint.org/docs/rules/space-before-function-paren)\*
-Leads to inconsistency in readability.
-
 #### [space-in-parens](https://eslint.org/docs/rules/space-in-parens)\*
 Leads to inconsistency in readability.<br /><br />
 
