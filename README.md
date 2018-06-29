@@ -121,9 +121,8 @@ This is almost certainly a mistake.
 Comparisons directly to `NaN` do not behave as expected.
 
 #### [valid-typeof](http://eslint.org/docs/rules/valid-typeof)\*
-This is almost certainly a mistake.
+This is almost certainly a mistake.<br /><br />
 
-<br />
 ### [Best Practices](http://eslint.org/docs/rules/#best-practices)
 <hr />
 
@@ -308,16 +307,14 @@ This is almost certainly a mistake.
 
 #### [wrap-iife](http://eslint.org/docs/rules/wrap-iife)
 Attempting to immediately execute a function declaration will cause a `SyntaxError`.
-This should be wrapped in parentheses instead.
+This should be wrapped in parentheses instead.<br /><br />
 
-<br />
 ### [Strict Mode](http://eslint.org/docs/rules/#strict-mode)
 <hr />
 
 #### [strict](http://eslint.org/docs/rules/strict)
-Strict mode fixes several issues in Node scripts.
+Strict mode fixes several issues in Node scripts.<br /><br />
 
-<br />
 ### [Variables](http://eslint.org/docs/rules/#variables)
 <hr />
 
@@ -331,9 +328,8 @@ This may not behave as expected. Use `typeof myVar === 'undefined'` instead.
 This is almost certainly a mistake.
 
 #### [no-use-before-define](https://eslint.org/docs/rules/no-use-before-define)
-This is almost certainly a mistake.
+This is almost certainly a mistake.<br /><br />
 
-<br />
 ### [Stylistic Issues](http://eslint.org/docs/rules/#stylistic-issues)
 <hr />
 
@@ -409,9 +405,8 @@ Leads to inconsistency in readability.
 Leads to inconsistency in readability.
 
 #### [space-in-parens](https://eslint.org/docs/rules/space-in-parens)\*
-Leads to inconsistency in readability.
+Leads to inconsistency in readability.<br /><br />
 
-<br />
 ### [ECMAScript 6](http://eslint.org/docs/rules/#ecmascript-6)
 <hr />
 
@@ -478,9 +473,8 @@ function(...args) {
 This is almost certainly a mistake.
 
 #### [symbol-description](http://eslint.org/docs/rules/symbol-description)
-This will throw a `TypeError`.
+This will throw a `TypeError`.<br /><br />
 
-<br />
 ### [React](https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules)
 <hr />
 
@@ -556,9 +550,8 @@ This is almost certainly a mistake.
 This will cause an error.
 
 #### [react/void-dom-elements-no-children](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md)\*
-This is almost certainly a mistake.
+This is almost certainly a mistake.<br /><br />
 
-<br />
 ### [JSX](https://github.com/yannickcr/eslint-plugin-react#jsx-specific-rules)
 <hr />
 
