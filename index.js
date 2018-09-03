@@ -12,6 +12,11 @@ module.exports = {
       experimentalObjectRestSpread: true,
     },
   },
+  settings: {
+    react: {
+      version: "16.0"
+    }
+  },
   rules: rules,
   plugins: ['react'],
 };
