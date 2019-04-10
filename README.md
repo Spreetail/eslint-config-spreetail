@@ -558,9 +558,6 @@ This may be required for build configurations.
 #### [react/jsx-key](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md)
 This is more or less required by React for performance reasons.
 
-#### [react/jsx-no-bind](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
-This will lead to poor performance.
-
 #### [react/jsx-no-comment-textnodes](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md)\*
 This is almost certainly a mistake.
 
