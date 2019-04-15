@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-spreetail",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "ESLint configuration used at Spreetail.",
   "main": "index.js",
   "scripts": {
